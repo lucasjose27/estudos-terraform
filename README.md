@@ -110,4 +110,62 @@ Extrair para pasta selecionada.
 ![Visualizando versão](img/terraform-version-command.png)
 
 ---
+
+## 🛠️ Gerenciamento de Versões com tfenv (WSL)
+
+O **tfenv** é um gerenciador de versões para o Terraform. Utilizá-lo através do **WSL (Windows Subsystem for Linux)** é a forma mais recomendada para manter um ambiente de desenvolvimento limpo e próximo ao ambiente de produção.
+
+### 1. Instalando o Ubuntu (WSL)
+No PowerShell, execute o comando abaixo para baixar o kernel do Linux e a imagem do Ubuntu
+
+```powershell
+wsl --install -d Ubuntu
+```
+O sistema solicitará a criação de um **usuário** e uma **senha**. Anote-os, pois você precisará da senha para executar comandos como `sudo`.
+
+### 2. Preparando o ambiente Linux (WSL)
+
+Abra o terminal do Ubuntu e atualize os pacotes do sistema, instalando as dependências necessárias: 
+
+```bash
+# Atualiza o sistema e instala git, curl e unzip
+
+sudo apt update && sudo apt upgrade -y 
+sudo apt install -y git curl unzip
+```
+### 3. Instalando o tfenv
+
+Siga os passos para baixar e configurar o caminho do gerenciador:
+
+```bash
+# Baixa o repositório do tfenv
+
+git clone --depth=1 [https://github.com/tfutils/tfenv.git](https://github.com/tfutils/tfenv.git) ~/.tfenv 
+
+# Configura o caminho (PATH) no seu bash
+
+echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bashrc 
+source ~/.bashrc 
+```
+### 4. Instalando o Terraform via tfenv
+
+Com o gerenciador pronto, instale a versão mais recente do Terraform:
+
+```bash
+# Baixa a última versão
+tfenv install latest 
+
+# Define a versão baixada como a versão em uso
+tfenv use latest 
+```
+### 5. Verificação Final
+
+Para confirmar que o Terraform está rodando corretamente no ambiente Linux, verifique a versão instalada:
+
+```bash
+
+terraform --version 
+
+```
+
 > 🚧 **Status:** Documentação teórica e ambiente concluídos. Pronto para os primeiros scripts!
