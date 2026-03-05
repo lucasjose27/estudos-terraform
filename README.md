@@ -33,6 +33,15 @@ resource "local_file" "exemplo" {
   content  = "Aprender Terraform, HCL e IaC!"
 }
 ```
+* **Anatomia do bloco:**
+
+`resource`: O tipo de bloco (neste caso, define um recurso que será criado).
+
+`local_file`: O nome do provider e o tipo do recurso.
+
+`"exemplo"`: O nome local (identificador) que damos ao recurso dentro do código.
+
+* **Argumentos:** Dentro das chaves `{ }`, definimos as configurações (como o nome do arquivo e o conteúdo).
 
 ### Planos de Execução
 * Proporciona **segurança de previsibilidade**.
