@@ -44,16 +44,45 @@ Os provedores expõem recursos em diferentes níveis:
 ## 💻 Guia de Instalação (Windows)
 
 1. **Download:** Baixe o arquivo compatível no [site oficial](https://developer.hashicorp.com/terraform/install#windows).
+![Baixando o Terraform](img/baixar-terraform.png)
 2. **Extração:** Extraia o conteúdo do arquivo `.zip` baixado.
-3. **Configuração da Pasta:** * Crie a pasta `C:\Program Files\Terraform`.
+![Extraindo o arquivo](img/extrair-arquivos.png)
+
+Extrair para pasta selecionada. 
+
+![Extraindo p/ pasta](img/extrair-p-pasta.png)
+
+3. **Copiando arquivo .exe:** *Copie o arquivo terraform.exe
+
+![Copiando arquivo terraform](img/copiar-exe.png)
+
+4. **Configuração da Pasta:** * Crie a pasta `C:\Program Files\Terraform`.
    * Cole o arquivo `terraform.exe` dentro dela.
-4. **Variáveis de Ambiente (PATH):**
+
+![Criando pasta e colando arquivo exe](img/cole-exe.png)
+
+5. **Variáveis de Ambiente (PATH):**
    * Busque por "Editar as variáveis de ambiente do sistema" no Windows.
+
+![Busque path](img/pesquisa-path.png)
+
    * Em "Variáveis do Sistema", selecione **Path**, clique em **Editar** e depois em **Novo**.
+
+![Selecionando path e editar](img/select-path-edit.png)
+
    * Adicione o caminho `C:\Program Files\Terraform` e confirme.
-5. **Verificação no Terminal:**
+
+![Adicionando caminho](img/caminho-adc.png)
+
+6. **Verificação no Terminal:**
+
    * `terraform`: Para visualizar comandos disponíveis.
+
+![Listando comandos](img/terraform-command.png)
+
    * `terraform version`: Para confirmar a versão instalada.
+
+![Visualizando versão](img/terraform-version-command.png)
 
 ---
 > 🚧 **Status:** Documentação teórica e ambiente concluídos. Pronto para os primeiros scripts!
