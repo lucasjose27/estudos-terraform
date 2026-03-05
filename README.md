@@ -24,6 +24,16 @@ O Terraform utiliza a **HCL (HashiCorp Configuration Language)**, uma linguagem 
 * **Declarativa:** Foco no estado final e não nos passos individuais.
 * **Blocos de Código:** Estrutura baseada em blocos para definir tipos de recursos e configurações.
 
+#### Exemplo de Estrutura (HCL):
+
+```hcl
+# Bloco de recurso para criar um arquivo local
+resource "local_file" "exemplo" {
+  filename = "lista_estudos.txt"
+  content  = "Aprender Terraform, HCL e IaC!"
+}
+```
+
 ### Planos de Execução
 * Proporciona **segurança de previsibilidade**.
 * Oferece a **separação entre planejamento e aplicação** das mudanças.
